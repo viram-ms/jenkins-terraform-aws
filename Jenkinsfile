@@ -41,6 +41,7 @@ pipeline {
 
                     sh "terraform plan -input=false -out tfplan "
                     sh 'terraform show -no-color tfplan > tfplan.txt'
+                    sh 'cat tfplan.txt'
                 }
                 
             }
