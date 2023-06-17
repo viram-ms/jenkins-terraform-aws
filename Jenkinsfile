@@ -88,6 +88,7 @@ pipeline {
 
  steps {
             dir("terraform") {
+                sh "terraform init -input=false"
            sh "terraform destroy --auto-approve"
         }
             }
