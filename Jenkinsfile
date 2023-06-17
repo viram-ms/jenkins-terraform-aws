@@ -75,7 +75,7 @@ pipeline {
             }
  steps {
             dir("terraform") {
-                sh "terraform apply -input=false terraform/tfplan"
+                sh "terraform apply -input=false tfplan"
             }
             }
            
