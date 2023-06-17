@@ -73,8 +73,8 @@ pipeline {
                     equals expected: true, actual: params.destroy
                 }
             }
-            dir("terraform") {
  steps {
+            dir("terraform") {
                 sh "terraform apply -input=false terraform/tfplan"
             }
             }
@@ -86,8 +86,8 @@ pipeline {
                 equals expected: true, actual: params.destroy
             }
 
-            dir("terraform") {
  steps {
+            dir("terraform") {
            sh "terraform destroy --auto-approve"
         }
             }
